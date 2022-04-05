@@ -1,7 +1,12 @@
 import './mobile_menu.css';
+import homeSVG from './icons/home.svg';
+import shopSVG from './icons/shop.svg';
+import walletSVG from './icons/wallet.svg';
+import accountSVG from './icons/account.svg';
 
 const mobileMenu = (id) => {
   let SELECTED_BUTTON;
+  const SVGs = [homeSVG, shopSVG, walletSVG, accountSVG];
 
   const renderButtons = () => {
     const mobileButtons = document.querySelectorAll(`.mobile-menu-choice-${id}`);
@@ -29,6 +34,11 @@ const mobileMenu = (id) => {
     const mobileButtons = document.querySelectorAll(`.mobile-menu-choice-${id}`);
     mobileButtons.forEach((button, i) => {
       button.addEventListener('click', (e) => DOMHandlers.handleMobileButtonClick(e, i));
+    });
+
+    const mobileSVGs = document.querySelectorAll(`.mobile-menu-icon-${id}`);
+    mobileSVGs.forEach((icon, i) => {
+      icon.src = SVGs[i];
     });
   })();
 };
