@@ -1,0 +1,37 @@
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  gap: 1rem;
+
+  background-color: #c69b7b;
+}
+
+.mobile-menu-choice-1 {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.mobile-menu-icon {
+  width: min(20vw, 100px);
+  filter: invert(23%) sepia(8%) saturate(942%) hue-rotate(209deg) brightness(89%) contrast(94%);
+
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.selected-mobile-button {
+  background-color: #f7ccac;
+}
